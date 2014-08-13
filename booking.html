@@ -1,0 +1,1177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>360youlun.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap-select.css" rel="stylesheet">
+<link href="css/easy-responsive-tabs-inside.css" rel="stylesheet" >
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<!--[if IE 8]>
+<link href="css/style-ie8.css" rel="stylesheet">
+<![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/footable.js" type="text/javascript"></script>
+<script src="js/easyResponsiveTabs.js"></script>
+<script src="js/jquery.stepy.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
+window.onload=function(){
+			$('.selectpicker').selectpicker();
+}	
+$(function() {	
+	$('#stepy').stepy({
+			description:  false,
+			block:		true,
+			errorImage:	false,
+			
+			validate:	false,
+			legend:			false,
+			titleClick:   true,
+  		titleTarget:  '#steper',
+			finishButton: false
+		});
+		
+		
+		$('#myTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true,   // 100% fit in a container
+				//closed: 'accordion', // Start closed if in accordion view
+				activate: function(event) { // Callback function if tab is switched
+						var $tab = $(this);
+						var $info = $('#tabInfo');
+						var $name = $('span', $info);
+						$name.text($tab.text());
+						$info.show();
+				}
+		});
+		$('#collapseP').on('click', function(e){
+			$('#collapseP').toggleClass('icon-arrow-down , icon-arrow-up', 200);
+		});
+		
+		$('.footable').footable();
+});
+</script>
+
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+
+<!--[if IE 9]>
+<script src="js/ie9.min.js"></script>
+<![endif]-->
+
+
+</head>
+<body>
+<!-- .container -->
+<div class="container"> 
+  <!-- .page-header -->
+  <header class="page-header">
+    <div class="row-fluid">
+    	<div class="page-header-margin">
+          <div class="logo"><a href="index.html"><img src="images/logo.jpg" alt="360youlun-logo" width="250" height="62"></a></div>
+          <div class="pull-right span7">
+            <div class="row-fluid">
+              <div class="pull-right social-con "><a href="#"><img src="images/icon1.jpg" alt=""> </a> <a href="#"><img src="images/icon2.jpg" alt=""> </a> <a href="#"><img src="images/icon3.jpg" alt=""> </a> <a href="#"><img src="images/icon4.jpg" alt=""> </a> </div>
+              <div class="pull-right span5 language-menu">
+                <div class="row-fluid">
+                    <div class="span5"><a href="login.html">Sign in</a> | <a href="login.html"> Signup</a></div>
+                  <div class="span6">
+                    <select class="selectpicker" data-style="btn-small">
+                      <option data-icon="flag-uk">English</option>
+                      <option data-icon="flag-cn">Chinese</option>
+                    </select>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="contact-area">
+              <div class="phone">400 776 776 <span>Call Us Today!</span></div>
+              <i class="icon-contact-area"></i> </div>
+          </div>
+        </div>
+    </div>
+  </header>
+  <!-- /.page-header -->  
+  
+  <!-- .navbar -->
+  <div class="navbar">
+		  <div class="navbar-inner">
+      	<form action="search-result.html"  class="navbar-form pull-right input-append">
+          <input type="text" placeholder="SEARCH:" class="nav-search">
+          <button class="nav-search-btn" type="button"><i class="icon-search"></i></button>
+        </form>
+		    <div style="width: auto">
+		      <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </a>		      
+		      <div class="nav-collapse collapse" style="height: 0px;">
+		        <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="cruise-lines.html">Cruise Lines</a></li>
+              <li><a href="#">CRUISE INFO</a></li>
+              <li><a href="deals.html">DEALS</a></li>
+              <li class="active"><a href="booking.html">BOOKING</a></li>
+              <li><a href="#">CONTACTS</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+            </ul>
+				    
+		        
+		      </div><!-- /.nav-collapse -->
+          
+		    </div><!-- /.container -->
+		  </div><!-- /navbar-inner -->
+		</div>
+  <!-- /.navbar -->  
+  
+  <!-- .container-fluid -->
+  <div class="container-fluid"> 
+    <!-- .row-fluid -->
+    <div class="row-fluid padding-top"> 
+      <!-- left sidebar start -->
+      <div class="span4"> 
+        <!-- .search-con -->
+        <div class="search-con-inside">
+          <div class="padding">
+            <h4 data-target=".search-form" data-toggle="collapse">Find Your Cruise</h4>
+            <form action="search-result.html" class="search-form collapse">
+              <div class="control-group">
+                <label>Destination</label>
+                <div class="controls">
+                  <select class="input-block-level selectpicker "  data-style="btn-small">
+                    <option>Cruise To Nowhere</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="half pull-left">
+                  <label >Length</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker"  data-style="btn-small">
+                      <option>Any Length</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="half pull-right">
+                  <label >Month</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker "  data-style="btn-small">
+                      <option>Any Month</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label>Cruise Line</label>
+                <div class="controls">
+                  <select class="input-block-level selectpicker "  data-style="btn-small">
+                    <option>Carnival Cruise Lines</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="controls-title">Number of Travelers</div>
+              <div class="control-group clearfix">
+                <div class="half pull-left">
+                  <label >Length</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker "  data-style="btn-small">
+                      <option>Any Length</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="half pull-right">
+                  <label >Month</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker "  data-style="btn-small">
+                      <option>Any Month</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-block btn btn-large btn-orange">Search Cruises</button>
+            </form>
+          </div>
+        </div>
+        <!-- /.search-con -->
+        
+        <div class="best">
+          <div class="best-bg"><span data-target=".ppc" data-toggle="collapse"> Best Deals Promotions Packages</span>
+            <div class="inside ppc collapse">
+              <p>Sign up for our newsletter and receive our best deals in your inbox.</p>
+              <form>
+                <input type="text" class="input-block-level" placeholder="Name:">
+                <input type="text" class="input-block-level" placeholder="Email:">
+                <button type="submit" class="btn btn-orange">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- left sidebar end --> 
+      
+      <!-- MAIN BODY CONTENT START -->
+      <div class="span8"> 
+        <!-- .breadcrumb start -->
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a> <i class="icon-breadcrumb-divider"></i></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+        <!-- .breadcrumb end --> 
+        
+        <!-- TITLE / STEPY BAR -->
+        <div class="row-fluid border-bottom-grey">
+          <div class="pull-left">
+            <h3>Cruise Booking</h3>
+          </div>
+          <div id="steper" class="pull-right"></div>
+        </div>
+        <!-- /TITLE / STEPY BAR -->
+        
+        
+        <div class="serach-result2 row-fluid">
+          <div class="photo span4"> <a href="#"><img src="images/search1.jpg" alt=""></a> </div>
+          <div class="detail span8">
+            <h3><a href="#">3 Days Bahamas</a></h3>
+            <p class="title">Norwaygian Cruise Line. Norwaygian Sky</p>
+            <p class="meta"> <a href="#">Miami</a>, <a href="#">Great ay</a>, <a href="#">Nassau</a>, <a href="#">Miami</a> | Friday, October 18, 2013<br>
+              Inside Stateroom (ID)<br>
+              2 Adults/Cabin 9669 </p>
+            <p class="price text-blue">EST.TOTAL  $ 535.98</p>
+          </div>
+        </div>
+        
+        <form id="stepy">
+          <fieldset title="Cabin">
+            <!--TAB START-->
+            <div id="myTab" >
+              <ul class="resp-tabs-list">
+                <li class="active" ><a data-toggle="tab" href="#inside">inside</a></li>
+                <li><a data-toggle="tab" href="#outside">outside</a></li>
+                <li><a data-toggle="tab" href="#balcony">balcony</a></li>
+                <li><a data-toggle="tab" href="#suite">suite</a></li>
+              </ul>
+              <div class="tab-content white-box resp-tabs-container">  
+                <!--FIRST TAB-->
+                <div class="tab-pane active booking" id="inside" > 
+                  
+                  <!--ROW 1 -->
+                  <div class="gray-gradient-box2">
+                    <div class="row-fluid">
+                      <div class="media-body span4">
+                        <h6 class="media-heading2"><a href="#">Deluxe oceanview Stateroomwith Verandah</a></h6>
+                        <p>Category-USA- Deck : 10</p>
+                        <div class="deluxe">remaining essentially unchanged. It was popularised in the 1960s...</div>
+                      </div>
+                      <div class="span2 white-gradient-box over-view-btn2"> 246 Sq ft. incl,Verandah
+                        <div class="gray-gradient-box-bor"></div>
+                        <span class="price">Floor to Ceiling</span> 
+                      </div>
+                      <div class="span2 homePhoto"> <img  src="images/home9.jpg"> </div>
+                      <div class="per-passenger span2"> <a href="#">Per Passenger (2)</a>
+                        <p>$587<br>
+                          Cruise Total$1.174</p>
+                      </div>
+                      <div class="per-passenger passenger-divider span2"> <a href="#">Your Rise</a>
+                        <p>$587</p>
+                        <a class="btn btn-mini btn-orange btn-passenger" type="button">Select</a> 
+                      </div>
+                     </div>
+                  </div>
+                  <!--ROW 2 -->
+                  <div class="gray-gradient-box2">
+                    <div class="row-fluid">
+                      <div class="media-body span4">
+                        <h6 class="media-heading2"><a href="#">Deluxe oceanview Stateroomwith Verandah</a></h6>
+                        <p>Category-USA- Deck : 10</p>
+                        <div class="deluxe">remaining essentially unchanged. It was popularised in the 1960s...</div>
+                      </div>
+                      <div class="span2 white-gradient-box over-view-btn2"> 246 Sq ft. incl,Verandah
+                        <div class="gray-gradient-box-bor"></div>
+                        <span class="price">Floor to Ceiling</span> 
+                      </div>
+                      <div class="span2 homePhoto"> <img  src="images/home10.jpg"> </div>
+                      <div class="per-passenger span2"> <a href="#">Per Passenger (2)</a>
+                        <p>$587<br>
+                          Cruise Total$1.174</p>
+                      </div>
+                      <div class="per-passenger passenger-divider span2"> <a href="#">Your Rise</a>
+                        <p>$587</p>
+                        <a class="btn btn-mini btn-orange btn-passenger" type="button">Select</a> 
+                      </div>
+                     </div>
+                  </div>
+                  <!--ROW 3 -->
+                  <div class="gray-gradient-box2">
+                    <div class="row-fluid">
+                      <div class="media-body span4">
+                        <h6 class="media-heading2"><a href="#">Deluxe oceanview Stateroomwith Verandah</a></h6>
+                        <p>Category-USA- Deck : 10</p>
+                        <div class="deluxe">remaining essentially unchanged. It was popularised in the 1960s...</div>
+                      </div>
+                      <div class="span2 white-gradient-box over-view-btn2"> 246 Sq ft. incl,Verandah
+                        <div class="gray-gradient-box-bor"></div>
+                        <span class="price">Floor to Ceiling</span> 
+                      </div>
+                      <div class="span2 homePhoto"> <img  src="images/home11.jpg"> </div>
+                      <div class="per-passenger span2"> <a href="#">Per Passenger (2)</a>
+                        <p>$587<br>
+                          Cruise Total$1.174</p>
+                      </div>
+                      <div class="per-passenger passenger-divider span2"> <a href="#">Your Rise</a>
+                        <p>$587</p>
+                        <a class="btn btn-mini btn-orange btn-passenger" type="button">Select</a> 
+                      </div>
+                     </div>
+                  </div>
+                  <!--ROW 4 -->
+                  <div class="gray-gradient-box2">
+                    <div class="row-fluid">
+                      <div class="media-body span4">
+                        <h6 class="media-heading2"><a href="#">Deluxe oceanview Stateroomwith Verandah</a></h6>
+                        <p>Category-USA- Deck : 10</p>
+                        <div class="deluxe">remaining essentially unchanged. It was popularised in the 1960s...</div>
+                      </div>
+                      <div class="span2 white-gradient-box over-view-btn2"> 246 Sq ft. incl,Verandah
+                        <div class="gray-gradient-box-bor"></div>
+                        <span class="price">Floor to Ceiling</span> 
+                      </div>
+                      <div class="span2 homePhoto"> <img  src="images/home12.jpg"> </div>
+                      <div class="per-passenger span2"> <a href="#">Per Passenger (2)</a>
+                        <p>$587<br>
+                          Cruise Total$1.174</p>
+                      </div>
+                      <div class="per-passenger passenger-divider span2"> <a href="#">Your Rise</a>
+                        <p>$587</p>
+                        <a class="btn btn-mini btn-orange btn-passenger" type="button">Select</a> 
+                      </div>
+                     </div>
+                  </div>
+                </div>
+                
+                <!--SECOND TAB-->
+                <div class="tab-pane" id="outside"> Outside content </div>
+                <!--THERD TAB-->
+                <div class="tab-pane" id="balcony"> Balcony </div>
+                <!--FORTH TAB-->
+                <div class="tab-pane" id="suite"> Suite </div>
+              </div>
+            </div>
+            <!--TAB END-->
+          </fieldset>
+          <fieldset title="Deck">
+            <h3>Ship Decks</h3>
+            <div class="hr1"></div>
+            
+            <div class="row-fluid">
+              <div class="span6">
+            
+                <div class="row-fluid margin-top category">
+                  <div class="span5">Category ID</div>
+                  <div class="span2 category-id"></div>
+                </div>
+              
+                <div class="row-fluid margin-top category">
+                  <div class="span5">Deck Selected</div>
+                  <div class="span2">
+                    <div class="btn-group">
+                      <button class="btn">Action</button>
+                      <button class="btn dropdown-toggle" data-toggle="dropdown"> <span class="caret"></span> </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">gfhdg</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-fluid margin-top category">
+                  <img src="images/cate1.jpg">
+                </div>
+                <div class="row-fluid gray-box margin-top2 padding-none">
+                    <div class="row-fluid cabins border-bottom-grey padding-none margin-bottom-none category-list">
+                      <div class="span2 text-center"><div class="padding">#</div></div>
+                      <div class="span10 border-left-grey "><div class="padding">List of Cabins</div></div>
+                    </div>
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">1</div></div>
+                      <div class="span10 border-left-grey">
+                        <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id red"></div></div>
+                            <div class="span9"><h3>ic</h3> Inside Stateroom</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">2</div></div>
+                      <div class="span10 border-left-grey">
+                        <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id light-grey"></div></div>
+                            <div class="span9"><h3>ib</h3> Inside Stateroom</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">3</div></div>
+                      <div class="span10 border-left-grey">
+                        <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id deep-grey"></div></div>
+                            <div class="span9"><h3>i1</h3> Inside Stateroom</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">4</div></div>
+                      <div class="span10 border-left-grey">
+                        <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id deep-yellow"></div></div>
+                            <div class="span9"><h3>of- $20</h3> Inside Stateroom</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">5</div></div>
+                      <div class="span10 border-left-grey">
+                        <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id"></div></div>
+                            <div class="span9"><h3>og- $20 </h3> Inside Stateroom</div>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">6</div></div>
+                      <div class="span10 border-left-grey">
+                         <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id"></div></div>
+                            <div class="span9"><h3>ok- $20 </h3> Inside Stateroom</div>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center"><div class="padding">7</div></div>
+                      <div class="span10 border-left-grey">
+                         <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id"></div></div>
+                            <div class="span9"><h3>oa- $20 </h3> Inside Stateroom</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row-fluid cabins">
+                      <div class="span2 text-center "><div class="padding">8</div></div>
+                      <div class="span10 border-left-grey ">
+                         <div class="padding">
+                          <div class="row-fluid">
+                            <div class="span3"><div class="category-id"></div></div>
+                            <div class="span9"><h3>ob</h3> Inside Stateroom</div>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                </div>
+                
+              </div> 
+            
+            
+              <div class="span6">
+                <h5>3 Cabins Available</h5>
+                <div class="cabin-box">
+                	<img src="images/home13.jpg">
+                  <label class="radio inline">
+                    <input type="radio" id="inlineCheckbox1" name="1" value="option1">
+                    9121 </label>
+                  <label class="radio inline">
+                    <input type="radio" id="inlineCheckbox2" name="1" value="option2">
+                    9399 </label>
+                  <label class="radio inline">
+                    <input type="radio" id="inlineCheckbox3" name="1" value="option3">
+                    9938 </label>
+                  <div class="span3 offset3 margin-top"> <a class="btn btn-mini btn-orange" type="button">Select</a> </div>
+                </div>
+                
+                <div class="margin-top text-center">
+                  <img src="images/img-ship.jpg">
+                </div>
+              </div>
+              
+              
+            </div>
+          </fieldset>
+          <fieldset title="Passengers">
+            <!--Passengers CONTENT --> 
+            <!--Passengers 1-->
+            <div class="row-fluid"> 
+              <!--.title-orange-bar-->
+              <div class="title-orange-bar clearfix ">
+                <div class="form-horizontal">
+                  <div class="span4 pull-left">Passenger 1 (Adult)</div>
+                  <div class="pull-right span6">
+                    <div class="pull-left">Select Passenger From Profile</div>
+                    <div class="controls span4 ">
+                      <select class="input-block-level selectpicker"  data-style="btn-small">
+                        <option> </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.title-orange-bar-->
+              <div class="form-horizontal form-bordered">
+                <div class="gray-box no-padding">
+                  <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span2">Title
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span3">First Name
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span2">Middle Name
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span3">Last Name
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span2">Suffix
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">Address / Phone</label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span3">Country
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option>USA</option>
+                          </select>
+                        </div>
+                        <div class="span3">Phone
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span5">Street Address 1
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                      <div class="row-fluid">
+                        <div class="span3">Street Address 2
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span3">City
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span3">State /Prov
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span2">Postal Code
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">E-Mail</label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span4">
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span8">
+                          <div class="controls"> Date of birth
+                            <input type="text" class="span2" placeholder="DD">
+                            <input type="text" class="span2" placeholder="MM">
+                            <input type="text" class="span3" placeholder="YYYY">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">Citizenship Info </label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span3">Nationality
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span3">Passport Number
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span5">Passport Passenger
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                      <div class="row-fluid">
+                        <div class="span6"> Passport Issue Date
+                          <div class="row-fluid">
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="DD">
+                            </div>
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="MM">
+                            </div>
+                            <div class="span4">
+                              <input type="text" class="input-block-level" placeholder="YYYY">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="span6">Passport Expire Date
+                          <div class="row-fluid">
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="DD">
+                            </div>
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="MM">
+                            </div>
+                            <div class="span4">
+                              <input type="text" class="input-block-level" placeholder="YYYY">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/Passengers 1--> 
+            <!--Passengers 2-->
+            <div class="row-fluid"> 
+              <!--.title-orange-bar-->
+              <div class="title-orange-bar clearfix ">
+                <div class="form-horizontal">
+                  <div class="span4 pull-left">Passenger 2 (Adult)</div>
+                  <div class="pull-right span6">
+                    <div class="pull-left">Select Passenger From Profile</div>
+                    <div class="controls span4 ">
+                      <select class="input-block-level selectpicker"  data-style="btn-small">
+                        <option> </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/.title-orange-bar-->
+              <div class="form-horizontal form-bordered">
+                <div class="gray-box no-padding">
+                  <div class="control-group">
+                    <label class="control-label">Name</label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span2">Title
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span3">First Name
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span2">Middle Name
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span3">Last Name
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span2">Suffix
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">Address / Phone</label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span3">Country
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option>USA</option>
+                          </select>
+                        </div>
+                        <div class="span3">Phone
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span5">Street Address 1
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                      <div class="row-fluid">
+                        <div class="span3">Street Address 2
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span3">City
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span3">State /Prov
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span2">Postal Code
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">E-Mail</label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span4">
+                          <input type="text" class="input-block-level">
+                        </div>
+                        <div class="span8">
+                          <div class="controls"> Date of birth
+                            <input type="text" class="span2" placeholder="DD">
+                            <input type="text" class="span2" placeholder="MM">
+                            <input type="text" class="span3" placeholder="YYYY">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label">Citizenship Info </label>
+                    <div class="controls">
+                      <div class="row-fluid">
+                        <div class="span3">Nationality
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span3">Passport Number
+                          <select class="selectpicker"  data-style="btn-small ">
+                            <option> </option>
+                          </select>
+                        </div>
+                        <div class="span5">Passport Passenger
+                          <input type="text" class="input-block-level">
+                        </div>
+                      </div>
+                      <div class="row-fluid">
+                        <div class="span6"> Passport Issue Date
+                          <div class="row-fluid">
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="DD">
+                            </div>
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="MM">
+                            </div>
+                            <div class="span4">
+                              <input type="text" class="input-block-level" placeholder="YYYY">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="span6">Passport Expire Date
+                          <div class="row-fluid">
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="DD">
+                            </div>
+                            <div class="span3">
+                              <input type="text" class="input-block-level" placeholder="MM">
+                            </div>
+                            <div class="span4">
+                              <input type="text" class="input-block-level" placeholder="YYYY">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/Passengers 2-->
+            
+            <div class="alert alert-info"> <strong>IMPORTANT  :    All Information in Bold Must be Completed.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong>Discrepancies can result in change fees or even denied boarding at the pier without a refund</strong> </div>
+            <small>* All prices are per person ,in us dollars,based Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</small>
+            <div class="heading-box">
+              <h3>If You need additional help to complete your reservation </h3>
+              <p>Call :  400 -776-776  and provide the following reference number : A 40716218</p>
+            </div>
+            <!--/Passengers CONTENT -->
+          </fieldset>
+          <fieldset title="Confirm">
+            <!--CONFIRM CONTENT-->
+            <div class="title-grey-bar">
+              <div class="row-fluid">
+                <div class="pull-left margin-top3"><a href="javascript:window.print();"><img src="images/icon-print.jpg" alt=""> Print</a></div>
+                <div class="pull-right"><img src="images/logo-small.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="gray-box">
+              <div class="row-fluid">
+                <div class="span6">
+                  <h3 class="title-blue-bar">Document Mailing Address</h3>
+                  <div class="padding"> <strong>Mr.Evgeny Demchenko</strong> <br>
+                    asdaddd,<br>
+                    asadadk,AG 24324<br>
+                    USA </div>
+                </div>
+                <div class="span6">
+                  <h3 class="title-blue-bar">Booking Details </h3>
+                  <div class="padding">
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Description </strong></div>
+                      <div class="span6 less-height">3 days Bahamas </div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Cruise Line </strong></div>
+                      <div class="span6 less-height">Disney Crusie Line</div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Ship</strong></div>
+                      <div class="span6 less-height">Disney Dream</div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Itinerary </strong></div>
+                      <div class="span6 less-height">Port Canaveral, Nassau, castaway cay, port Canaveral</div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Sail/Return Date </strong></div>
+                      <div class="span6 less-height">05-Sep-13 /08-Sep-13</div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Cabin Category </strong></div>
+                      <div class="span6 less-height">(05B)</div>
+                    </div>
+                    <div class="row-fluid">
+                      <div class="span4 less-height"><strong>Cabin Number </strong></div>
+                      <div class="span6 less-height">GTY (2 adults)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-grey-bar"> Passenger Information </div>
+            <table class="table table-bordered grey footable">
+              <thead>
+                <tr>
+                  <th class="orange">#</th>
+                  <th class="orange">Passenger Name</th>
+                  <th class="orange" nowrap="nowrap" data-hide="phone,tablet">Date of Birth</th>
+                  <th class="orange" data-hide="phone,tablet">Address</th>
+                  <th class="orange">Phone</th>
+                  <th class="orange" nowrap="nowrap" data-hide="phone,tablet">Air From</th>
+                  <th class="orange" data-hide="phone,tablet">Passport</th>
+                </tr>
+              </thead>
+              <tbody>                
+                <tr>
+                  <td>1</td>
+                  <td>Mr.Evgeny Demchenko</td>
+                  <td>11-29-1983</td>
+                  <td>dsadtadg, awaww, qweewewq</td>
+                  <td>43243424567</td>
+                  <td>......</td>
+                  <td>N/A</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mrs. Johanna Z</td>
+                  <td>11-29-1983</td>
+                  <td>&nbsp;</td>
+                  <td>43243424567</td>
+                  <td>......</td>
+                  <td>N/A</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="title-grey-bar"> Cruise Statement </div>
+            <table class="table table-bordered grey footable">
+              
+              <thead>
+                <tr>
+                  <th class="orange">Qty</th>
+                  <th class="orange">Item Description</th>
+                  <th class="orange" nowrap="nowrap" data-hide="phone,tablet">Unit Price</th>
+                  <th class="orange">Extended</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mr.Evgeny Demchenko</td>
+                  <td>$ 587.00</td>
+                  <td>$ 106.44</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mrs. Johanna Z</td>
+                  <td>$ 106.44 </td>
+                  <td>$ 587.00</td>
+                </tr>
+                <tr>
+                  <td class="border-top"><strong>*Cabin Total </strong></td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td class="border-top"><strong>$ 1,280.44</strong></td>
+                </tr>
+               </tbody>
+            </table>
+            <div class="alert alert-info margin-bottom-none"> <strong>IMPORTANT  :    All Information in Bold Must be Completed.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong>Discrepancies can result in change fees or even denied boarding at the pier without a refund</strong> </div>
+            <div class="title-grey-bar"> Invoice Total
+              <div class="pull-right">$ 1,280.44</div>
+            </div>
+            <!--/CONFIRM CONTENT-->
+            
+          </fieldset>
+        </form>
+      </div>
+      <!-- MAIN BODY CONTENT END --> 
+      
+    </div>
+    <!-- /.row-fluid --> 
+  </div>
+  <!-- /.container-fluid --> 
+  
+  <!-- OUR RELIABLE PARTNERS START -->
+  <div class="container-fluid">
+    <h3>Our Reliable Partners</h3>
+    <!-- .reliable-partners-carousel -->
+    <div class="reliable-partners-carousel">
+      <ul id="partners-carousel" class="clearfix">
+        <li><a href="#"><img src="images/partners/p1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p5.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p6.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p3.jpg" alt=""></a></li>
+      </ul>
+      <div class="reliable-partners-control"> <a id="prev3" class="prev" href="#">&lsaquo;</a> <a id="next3" class="next" href="#">&rsaquo;</a> </div>
+    </div>
+    <!-- /.reliable-partners-carousel --> 
+  </div>
+  <!-- OUR RELIABLE PARTNERS END --> 
+  
+  <!-- footer start -->
+  <div class="footer">   
+    <!-- footer column 1 start -->
+    <div class="footer-group">
+      <ul class="footer-nav-title">
+      	<li class="title"><a data-target=".popular-cruise-lines" data-toggle="collapse">Popular Cruise Lines</a></li>
+        <ul class="popular-cruise-lines collapse">
+          <li><a href="#">Carnival Cruise Lines</a></li>
+          <li><a href="#">Celebrity Cruises</a></li>
+          <li><a href="#">Costa Cruises</a></li>
+          <li><a href="#">Disney Cruise Line</a></li>
+          <li><a href="#">Holland America Line</a></li>
+          <li><a href="#">MSC Cruises</a></li>
+          <li><a href="#">Norwegian Cruise Line</a></li>
+          <li><a href="#">Princess Cruises</a></li>
+          <li><a href="#">Royal Caribbean International</a></li>
+          <li><a href="#" class="readmore">See all <span class="shrink">cruise lines </span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+      <ul class="footer-nav-title">
+      	<li class="title"><a data-target=".popular-destinations" data-toggle="collapse" class=""> Popular Destinations</a></li>
+        <ul class="popular-destinations collapse">
+          <li><a href="#">Alaska</a></li>
+          <li><a href="#">Caribbean</a></li>
+          <li><a href="#">Europe</a></li>
+          <li><a href="#">Hawaii</a></li>
+          <li><a href="#">Mexico</a></li>
+          <li><a href="#" class="readmore">See all <span class="shrink">cruise Destinations</span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+      
+    </div>
+    <!-- footer column 1 end --> 
+    
+    <!-- footer column 2 start -->
+    <div class="footer-group">
+      <ul class="footer-nav-title">
+        <li class="title"><a data-target=".specialty-cruises" data-toggle="collapse" class="">Specialty Cruises</a></li>
+        <ul class="specialty-cruises collapse">
+          <li><a href="#">Kids cruises</a></li>
+          <li><a href="#">Party cruises</a></li>
+          <li><a href="#">Culinary cruises</a></li>
+          <li><a href="#">Korea/Japan cruises</a></li>
+          <li><a href="#">MICE</a></li>
+          <li><a href="#" class="readmore">See All <span class="shrink">Specialty Cruises</span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+      <ul class="footer-nav-title">
+        <li class="title"><a data-target=".about-cruising" data-toggle="collapse" class="">All About Cruising</a></li>
+        <ul class="about-cruising collapse">
+          <li><a href="#">Frequently Asked Questions</a></li>
+          <li><a href="#">First Time Cruisers</a></li>
+          <li><a href="#">Value Comparison</a></li>
+          <li><a href="#">Cruising with Kids</a></li>
+          <li><a href="#">Vacation Packing Guide</a></li>
+          <li><a href="#">Onboard Activities</a></li>
+          <li><a href="#">Theme Cruises</a></li>
+          <li><a href="#">Special Event Cruises</a></li>
+          <li><a href="#" class="readmore">See All <span class="shrink">About Cruising</span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+    </div>
+    <!-- footer column 2 end --> 
+    
+    <!-- footer column 3 start -->
+    <div class="footer-group">
+      <div class="join-community">
+        <div class="title">Join Our Community</div>
+        <div class="social"> <a href="#"><img src="images/icon1.jpg" alt=""></a> <a href="#"><img src="images/icon2.jpg" alt=""></a> <a href="#"><img src="images/icon3.jpg" alt=""></a> <a href="#"><img src="images/icon4.jpg" alt=""></a> </div>
+        <div class="free-news-letter"><div class="title">Free E-Newsletter</div>
+        <p>Want great deals delivered to your inbox? Sign up for our free newsletter and you could win a free cruise for two!</p></div>
+        <form >
+          <input type="text" placeholder="Name:" class="input-block-level">
+          <input type="text" placeholder="Email:" class="input-block-level">
+          <button type="submit" class="btn btn-info btn-small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <!-- footer column 3 end --> 
+    
+    <!-- footer column 4 start -->
+    <div class="footer-group">
+      <div class="footer-contact-area">
+        <div class="clearfix">
+          <div class="title">Contact Us today</div>
+          <div class="row-fluid">
+            <img src="images/footer-logo.jpg" alt="" class="margin left-active">
+            <div class="control-group"> <strong>360youlun</strong>
+              <div><i class="icon-phone"></i>400 776 776</div>
+              <div><i class="icon-email"></i>Click to Email Us</div>
+            </div>
+          </div>
+        </div>
+        <div class="control-group footer-about-content">
+          <div class="footer-about"> <i class="icon-logo-footer"></i>About <br>
+            360youlun.com </div>
+          Established in 2006, 360youlun is a China leader in the Cruise booking and search... </div>
+      </div>
+    </div>
+    <!-- footer column 4 end --> 
+  </div>
+  <div class=" row-fluid">
+    <div class="footer-coppy">
+      <div class="pull-left">
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li>|</li>
+          <li><a href="#">Privacy</a></li>
+          <li>|</li>
+          <li><a href="#">Legal</a></li>
+          <li>|</li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+      </div>
+      <div class="pull-right"> &copy; 2013. 360youlun. All rights reserved. </div>
+    </div>
+  </div>
+  <!-- footer end -->  
+  
+</div>
+<!-- /.container --> 
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script> 
+<script type="text/javascript" language="javascript">
+	$(function() {
+		$('#foo4').carouFredSel({
+			responsive: true,
+			width: '100%',
+			prev: '#prev',
+			next: '#next',
+			duration    : 50,
+			scroll: 1,
+			items: {
+				
+			 	height: 153,	//	optionally resize item-height
+				visible: {
+					min: 2,
+					max: 3
+				}
+			}
+		});
+		$('#partners-carousel').carouFredSel({			
+			responsive: true,
+			width: '100%',
+			prev: '#prev3',
+			next: '#next3',
+			circular: true,
+	    	infinite: true,
+	    	auto    : false,
+			duration    : 500,
+			scroll: 2,
+			items: {
+			 	height: 72,	//	optionally resize item-height
+				visible: {
+					min: 2,
+					max: 6
+				}
+			}
+		});		
+		
+		
+	});
+</script>
+</body>
+</html>

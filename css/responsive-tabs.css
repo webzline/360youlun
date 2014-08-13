@@ -1,0 +1,85 @@
+
+/* REQUIRED for core functionality */
+
+.responsive-tabs__heading { display: none;}
+.responsive-tabs__list__item { display: inline; cursor:pointer;}
+
+
+@media (max-width: 767px) {
+	.responsive-tabs__list { display: none;}
+	.responsive-tabs__heading { display: block; cursor: pointer; }
+	.responsive-tabs__panel--closed-accordion-only { display: none;}
+}
+
+@media (min-width: 768px) {
+	.responsive-tabs__panel--closed-accordion-only { display: block !important;}
+}
+
+/* END - Required for core functionality */
+
+
+/* OPTIONAL - Basic Skin */
+
+.responsive-tabs-wrapper { 
+	clear: both;
+	zoom: 1; 
+}
+.responsive-tabs-wrapper:before,
+.responsive-tabs-wrapper:after {
+    content: "";
+    display: table;
+} 
+.responsive-tabs-wrapper:after {
+    clear: both;
+}
+
+@media (max-width: 767px) {
+	.tab-content{
+		min-height:20px;
+	}
+	h4.responsive-tabs__heading{
+		margin-bottom:0;
+	}
+	.responsive-tabs__heading { 
+		padding: 0.4em;
+        border-radius: 4px;
+        boix-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+			background-color: #5b5c62;
+			background-image: -moz-linear-gradient(top, #5b5c62, #505156);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5b5c62), to(#505156));
+			background-image: -webkit-linear-gradient(top, #5b5c62, #505156);
+			background-image: -o-linear-gradient(top, #5b5c62, #505156);
+			background-image: linear-gradient(to bottom, #5b5c62, #505156);
+			background-repeat: repeat-x;
+		  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5b5c62', endColorstr='#ff505156', GradientType=0);
+
+		position: relative;
+		color:#fff;
+	}
+	.responsive-tabs__heading--active{
+	background-color: #6dc7e1;
+			background-image: -moz-linear-gradient(top, #6dc7e1, #47aac7);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#47aac7), to(#47aac7));
+			background-image: -webkit-linear-gradient(top, #6dc7e1, #47aac7);
+			background-image: -o-linear-gradient(top, #6dc7e1, #47aac7);
+			background-image: linear-gradient(to bottom, #6dc7e1, #47aac7);
+			background-repeat: repeat-x;
+		  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff6dc7e1', endColorstr='#ff47aac7', GradientType=0);
+
+}
+
+	.responsive-tabs__heading i {
+     -webkit-transition: all 0.3s ease-in;
+             transition: all 0.3s ease-in;
+    }
+	.responsive-tabs__heading--active i {
+    -webkit-transform:rotate(90deg);
+       -moz-transform:rotate(90deg);
+         -o-transform:rotate(90deg);
+  /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1); */
+        -ms-transform:rotate(90deg); 
+            transform:rotate(90deg); 
+	 }
+}
+
+/* END - Optional - Basic Skin */

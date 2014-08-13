@@ -1,0 +1,675 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>360youlun.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap-select.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/easy-responsive-tabs-inside.css" rel="stylesheet" >
+<!--[if IE 8]>
+<link href="css/style-ie8.css" rel="stylesheet">
+<![endif]-->
+<script src="js/jquery.js"></script>
+<script src="js/easyResponsiveTabs.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script>
+	window.onload=function(){
+				$('.selectpicker').selectpicker();
+	}	
+	$(document).ready(function () {
+		$('#myTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true,   // 100% fit in a container
+				//closed: 'accordion', // Start closed if in accordion view
+				activate: function(event) { // Callback function if tab is switched
+						var $tab = $(this);
+						var $info = $('#tabInfo');
+						var $name = $('span', $info);
+						$name.text($tab.text());
+						$info.show();
+				}
+		});
+		$('#collapseP').on('click', function(e){
+			$('#collapseP').toggleClass('icon-arrow-down , icon-arrow-up', 200);
+		});
+			
+	});
+</script>
+
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<script src="js/ie9.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- .container -->
+<div class="container"> 
+  
+  <!-- .page-header -->
+  <header class="page-header">
+    <div class="row-fluid">
+    	<div class="page-header-margin">
+          <div class="logo"><a href="index.html"><img src="images/logo.jpg" alt="360youlun-logo" width="250" height="62"></a></div>
+          <div class="pull-right span7">
+            <div class="row-fluid">
+              <div class="pull-right social-con "><a href="#"><img src="images/icon1.jpg" alt=""> </a> <a href="#"><img src="images/icon2.jpg" alt=""> </a> <a href="#"><img src="images/icon3.jpg" alt=""> </a> <a href="#"><img src="images/icon4.jpg" alt=""> </a> </div>
+              <div class="pull-right span5 language-menu">
+                <div class="row-fluid">
+                    <div class="span5"><a href="login.html">Sign in</a> | <a href="login.html"> Signup</a></div>
+                  <div class="span6">
+                    <select class="selectpicker" data-style="btn-small">
+                      <option data-icon="flag-uk">English</option>
+                      <option data-icon="flag-cn">Chinese</option>
+                    </select>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="contact-area">
+              <div class="phone">400 776 776 <span>Call Us Today!</span></div>
+              <i class="icon-contact-area"></i> </div>
+          </div>
+        </div>
+    </div>
+  </header>
+  <!-- /.page-header -->  
+  
+  <!-- .navbar -->
+  <div class="navbar">
+		  <div class="navbar-inner">
+      	<form action="search-result.html"  class="navbar-form pull-right input-append">
+          <input type="text" placeholder="SEARCH:" class="nav-search">
+          <button class="nav-search-btn" type="button"><i class="icon-search"></i></button>
+        </form>
+		    <div style="width: auto">
+		      <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </a>		      
+		      <div class="nav-collapse collapse" style="height: 0px;">
+		        <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li class="active"><a href="cruise-lines.html">Cruise Lines</a></li>
+              <li><a href="#">CRUISE INFO</a></li>
+              <li><a href="deals.html">DEALS</a></li>
+              <li><a href="booking.html">BOOKING</a></li>
+              <li><a href="#">CONTACTS</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+            </ul>
+				    
+		        
+		      </div><!-- /.nav-collapse -->
+          
+		    </div><!-- /.container -->
+		  </div><!-- /navbar-inner -->
+		</div>
+  <!-- /.navbar --> 
+  
+  <!-- .container-fluid -->
+  <div class="container-fluid"> 
+    <!-- .row-fluid -->
+    <div class="row-fluid padding-top"> 
+      <!-- left sidebar start -->
+      <div class="span4"> 
+        <!-- .search-con -->
+        <div class="search-con-inside">
+          <div class="padding">
+            <h4 data-target=".search-form" data-toggle="collapse">Find Your Cruise</h4>
+            <form action="search-result.html" class="search-form collapse">
+              <div class="control-group">
+                <label>Destination</label>
+                <div class="controls">
+                  <select class="input-block-level selectpicker "  data-style="btn-small">
+                    <option>Cruise To Nowhere</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="control-group clearfix">
+                <div class="half pull-left">
+                  <label >Length</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker"  data-style="btn-small">
+                      <option>Any Length</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="half pull-right">
+                  <label >Month</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker "  data-style="btn-small">
+                      <option>Any Month</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label>Cruise Line</label>
+                <div class="controls">
+                  <select class="input-block-level selectpicker "  data-style="btn-small">
+                    <option>Carnival Cruise Lines</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="controls-title">Number of Travelers</div>
+              <div class="control-group clearfix">
+                <div class="half pull-left">
+                  <label >Length</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker "  data-style="btn-small">
+                      <option>Any Length</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="half pull-right">
+                  <label >Month</label>
+                  <div class="controls">
+                    <select class="input-block-level selectpicker "  data-style="btn-small">
+                      <option>Any Month</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button class="btn-block btn btn-large btn-orange">Search Cruises</button>
+            </form>
+          </div>
+        </div>
+        <!-- /.search-con -->
+        
+        <div class="best">
+          <div class="best-bg"><span data-target=".ppc" data-toggle="collapse"> Best Deals Promotions Packages</span>
+            <div class="inside ppc collapse">
+              <p>Sign up for our newsletter and receive our best deals in your inbox.</p>
+              <form>
+                <input type="text" class="input-block-level" placeholder="Name:">
+                <input type="text" class="input-block-level" placeholder="Email:">
+                <button type="submit" class="btn btn-orange">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- left sidebar end --> 
+      
+      <!-- MAIN BODY CONTENT START -->
+      <div class="span8"> 
+        <!-- .breadcrumb start -->
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a> <i class="icon-breadcrumb-divider"></i></li>
+          <li><a href="cruise-lines.html">Cruise Lines</a></li>
+        </ul>
+        <!-- .breadcrumb end --> 
+        
+         <!-- #carousel satrt -->
+        <div id="carousel" class="carousel slide inside">
+        	<ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+          <!-- Carousel items -->
+          <div class="carousel-inner">            
+            <div class="active item"> 
+            	<img src="images/destionation-slider2.png" alt="">
+              <div class="carousel-caption">
+                <h2>Carnival Cruises</h2>
+                <h5>Your Sailingartner around the world</h5>                
+              </div>
+            </div>            
+            <div class="item"> 
+            	<img src="images/destionation-slider.png" alt="">
+              <div class="carousel-caption">
+                <h2>CARRIBEAN Cruises</h2>
+                <h5>PARADISE ON EARTH</h5>                
+              </div>              
+            </div> 
+            <div class="item"> 
+            	<img src="images/destionation-slider.png" alt="">
+              <div class="carousel-caption">
+                <h2>CARRIBEAN Cruises</h2>
+                <h5>PARADISE ON EARTH</h5>                
+              </div>              
+            </div>            
+          </div>
+          <!-- Carousel nav -->
+          <div class="img-shadow"></div>
+        </div>
+        
+        <!-- #carousel end --> 
+        
+        <!--TAB START-->
+        <div id="myTab" >
+          <ul class="resp-tabs-list">
+            <li class="active" ><a data-toggle="tab" href="#over-view">Over View</a></li>
+            <li><a data-toggle="tab" href="#highlights">Highlights</a></li>
+            <li><a data-toggle="tab" href="#featured-cruises">Featured Cruises</a></li>
+            <li><a data-toggle="tab" href="#ship">ship</a></li>
+          </ul>
+          <div class="tab-content gray-box resp-tabs-container">  
+            <!--FIRST TAB-->
+            <div class="tab-pane active" id="over-view" >
+              <div class="span12"> <img src="images/carnival.png">
+                <p>&nbsp;
+                
+                <p>
+                
+                <p>Carnival Cruise Line was established in 1972 and is the world's largest cruise line. A Carnival cruise is all about creating a fun, memorable vacation and their "Fun Ships" were designed to keep the fun going. On a Carnival Cruise ship there is always so much to do. On deck there are pools, waterslides, golf, a Seaside Theater and activities galore to keep kids and adults of all ages entertained. Kids love Camp Carnival and for a little quiet time adults can relax at the 'Adult-Only' Serenity Retreat or be pampered in the Spa Carnival. Dining options are varied and include casual dining on deck, traditional dining, sushi and elegant dining in the Steakhouse Restaurant. Plus 24-hour stateroom service is always available. At night the fun really comes alive with a variety of venues including comedy clubs, piano bars, Broadway shows, night clubs and of course the casino. galore to keep kids and adults of all ages entertained. Kids love Camp Carnival and for a little quiet time adults can relax at the 'Adult-Only' Serenity Retreat or be pampered in the Spa Carnival. Dining options are varied and include casual dining on deck, traditional dining, sushi and elegant dining in the Steakhouse Restaurant.</p>
+                <p>Traditional dining, sushi and elegant dining in the Steakhouse Restaurant. Plus 24-hour stateroom service is always available. At night the fun really comes alive with a variety of venues including comedy clubs, piano bars, Broadway shows, night clubs and of course the casino.</p>
+              </div>
+            </div>
+            <!--SECOND TAB-->
+            <div class="tab-pane" id="highlights">
+              <h3>CARRIBEAN Cruises Highlights</h3>
+              <div class="thumbnails">
+                <div class="highlights-con">
+                  <div class="media">
+                    <div class="pull-left"> <a href="#"><img src="images/h1.jpg"></a> </div>
+                    <div class="media-body">
+                      <h6 class="media-heading"><a href="#">CHILDREN'S ACTIVITIES</a></h6>
+                      Kids love Camp Carnival. It's fun and offers a wide range of activities for kids aged 2-11.</div>
+                    <hr class="hr1">
+                  </div>
+                </div>
+                <div class="highlights-con right">
+                  <div class="media">
+                    <div class="pull-left"> <a href="#"><img src="images/h2.jpg"></a> </div>
+                    <div class="media-body">
+                      <h6 class="media-heading"><a href="#">CHILDREN'S ACTIVITIES</a></h6>
+                      Kids love Camp Carnival. It's fun and offers a wide range of activities for kids aged 2-11. </div>
+                    <hr class="hr1">
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <div class="highlights-con">
+                  <div class="media">
+                    <div class="pull-left"> <a href="#"><img src="images/h3.jpg"></a> </div>
+                    <div class="media-body">
+                      <h6 class="media-heading"><a href="#">CHILDREN'S ACTIVITIES</a></h6>
+                      Kids love Camp Carnival. It's fun and offers a wide range of activities for kids aged 2-11.</div>
+                    <hr class="hr1">
+                  </div>
+                </div>
+                <div class="highlights-con right">
+                  <div class="media">
+                    <div class="pull-left"> <a href="#"><img src="images/h4.jpg"></a> </div>
+                    <div class="media-body">
+                      <h6 class="media-heading"><a href="#">CHILDREN'S ACTIVITIES</a></h6>
+                      Kids love Camp Carnival. It's fun and offers a wide range of activities for kids aged 2-11. </div>
+                    <hr class="hr1">
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <div class="highlights-con">
+                  <div class="media">
+                    <div class="pull-left"> <a href="#"><img src="images/h5.jpg"></a> </div>
+                    <div class="media-body">
+                      <h6 class="media-heading"><a href="#">CHILDREN'S ACTIVITIES</a></h6>
+                      Kids love Camp Carnival. It's fun and offers a wide range of activities for kids aged 2-11.</div>
+                    <hr class="hr1">
+                  </div>
+                </div>
+                <div class="highlights-con right">
+                  <div class="media">
+                    <div class="pull-left"> <a href="#"><img src="images/h6.jpg"></a> </div>
+                    <div class="media-body">
+                      <h6 class="media-heading"><a href="#">CHILDREN'S ACTIVITIES</a></h6>
+                      Kids love Camp Carnival. It's fun and offers a wide range of activities for kids aged 2-11. </div>
+                    <hr class="hr1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--THERD TAB-->
+            <div class="tab-pane" id="featured-cruises">
+              <div class="thumbnails">
+                <div class="span4">
+                  <div class="thumbnail"> <a href="#"><img src="images/ship1.jpg" alt=""></a>
+                    <div class="caption"> <a href="#"><strong>3 day cruise to the Bahamas</strong></a>
+                      <p>¥ 9000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="thumbnail"> <a href="#"><img src="images/ship2.jpg" alt=""></a>
+                    <div class="caption"> <a href="#"><strong>3 day cruise to the Bahamas</strong></a>
+                      <p>¥ 9000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="thumbnail"> <a href="#"><img src="images/ship3.jpg" alt=""></a>
+                    <div class="caption"> <a href="#"><strong>3 day cruise to the Bahamas</strong></a>
+                      <p>¥ 9000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <div class="span4">
+                  <div class="thumbnail"> <a href="#"><img src="images/ship1.jpg" alt=""></a>
+                    <div class="caption"> <a href="#"><strong>3 day cruise to the Bahamas</strong></a>
+                      <p>¥ 9000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="thumbnail"> <a href="#"><img src="images/ship2.jpg" alt=""></a>
+                    <div class="caption"> <a href="#"><strong>3 day cruise to the Bahamas</strong></a>
+                      <p>¥ 9000</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="thumbnail"> <a href="#"><img src="images/ship3.jpg" alt=""></a>
+                    <div class="caption"> <a href="#"><strong>3 day cruise to the Bahamas</strong></a>
+                      <p>¥ 9000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--FORTH TAB-->
+            <div class="tab-pane" id="ship">
+              <div class="span5">
+                <div class="thumbnail"> <a href="#"><img src="images/ship-big.jpg" alt=""></a> </div>
+              </div>
+              <div class="clearfix"></div>
+              <h3>carnival cruises ships fleet </h3>
+              <div class="ships-fleet">
+                <ul>
+                  <li><a href="#">>> Breeze</a></li>
+                  <li><a href="#">>> Ecstasy</a></li>
+                  <li><a href="#">>> Freedom</a></li>
+                  <li><a href="#">>> Legend</a></li>
+                  <li><a href="#">>> Paradise</a></li>
+                  <li><a href="#">>> Splendor</a></li>
+                  <li><a href="#">>> Victory</a></li>
+                </ul>
+              </div>
+              <div class="ships-fleet">
+                <ul>
+                  <li><a href="#">>> Conquest</a></li>
+                  <li><a href="#">>> Elation</a></li>
+                  <li><a href="#">>> Glory</a></li>
+                  <li><a href="#">>> Liberty</a></li>
+                  <li><a href="#">>> Pride</a></li>
+                  <li><a href="#">>> Sunshine</a></li>
+                </ul>
+              </div>
+              <div class="ships-fleet">
+                <ul>
+                  <li><a href="#">>> Destiny</a></li>
+                  <li><a href="#">>> Fantasy</a></li>
+                  <li><a href="#">>> Imagination</a></li>
+                  <li><a href="#">>> Magic</a></li>
+                  <li><a href="#">>> Sensation</a></li>
+                  <li><a href="#">>> Triumph</a></li>
+                </ul>
+              </div>
+              <div class="ships-fleet">
+                <ul>
+                  <li><a href="#">>> Dream</a></li>
+                  <li><a href="#">>> Fascination</a></li>
+                  <li><a href="#">>> Inspiration</a></li>
+                  <li><a href="#">>> Miracle</a></li>
+                  <li><a href="#">>> Spirit</a></li>
+                  <li><a href="#">>> Valor</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </p>
+      	<!--TAB END-->
+        <h3>Last Minute Deals</h3>
+        <div class="gray-box"> 
+          <!-- .list_carousel -->
+          <div class="list-carousel">
+            <ul id="foo4" class="clearfix">
+              <li><a href="#"><img src="images/slider/list-slider-1.jpg" alt=""> 3 days Bahamas <br>
+                From 9000</a></li>
+              <li><a href="#"><img src="images/slider/list-slider-2.jpg" alt=""> 2 days Bahamas <br>
+                From 3000</a></li>
+              <li><a href="#"><img src="images/slider/list-slider-3.jpg" alt=""> 1 days Bahamas <br>
+                From 7000</a></li>
+              <li><a href="#"><img src="images/slider/list-slider-1.jpg" alt=""> 5 days Bahamas <br>
+                From 19000</a></li>
+              <li><a href="#"><img src="images/slider/list-slider-2.jpg" alt=""> 4 days Bahamas <br>
+                From 9000</a></li>
+              <li><a href="#"><img src="images/slider/list-slider-3.jpg" alt=""> 7 days Bahamas <br>
+                From 9000</a></li>
+            </ul>
+            <div class="list-carousel-control"> <a id="prev" class="prev" href="#">&lsaquo;</a> <a id="next" class="next" href="#">&rsaquo;</a> </div>
+          </div>
+          <!-- .list_carousel --> 
+        </div>
+      </div>
+      <!-- MAIN BODY CONTENT END --> 
+      
+    </div>
+    <!-- /.row-fluid --> 
+  </div>
+  <!-- /.container-fluid --> 
+  
+  <!-- OUR RELIABLE PARTNERS START -->
+  <div class="container-fluid">
+    <h3>Our Reliable Partners</h3>
+   <!-- .reliable-partners-carousel -->
+    <div class="reliable-partners-carousel">
+      <ul id="partners-carousel" class="clearfix">
+        <li><a href="#"><img src="images/partners/p1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p5.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p6.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/partners/p3.jpg" alt=""></a></li>
+      </ul>	
+      <div class="reliable-partners-control">		
+        <a id="prev3" class="prev" href="#">&lsaquo;</a>
+        <a id="next3" class="next" href="#">&rsaquo;</a>
+      </div>
+    </div>
+    <!-- /.reliable-partners-carousel --> 
+  </div>
+  <!-- OUR RELIABLE PARTNERS END --> 
+  
+  <!-- footer start -->
+  <div class="footer">   
+    <!-- footer column 1 start -->
+    <div class="footer-group">
+      <ul class="footer-nav-title">
+      	<li class="title"><a data-target=".popular-cruise-lines" data-toggle="collapse">Popular Cruise Lines</a></li>
+        <ul class="popular-cruise-lines collapse">
+          <li><a href="#">Carnival Cruise Lines</a></li>
+          <li><a href="#">Celebrity Cruises</a></li>
+          <li><a href="#">Costa Cruises</a></li>
+          <li><a href="#">Disney Cruise Line</a></li>
+          <li><a href="#">Holland America Line</a></li>
+          <li><a href="#">MSC Cruises</a></li>
+          <li><a href="#">Norwegian Cruise Line</a></li>
+          <li><a href="#">Princess Cruises</a></li>
+          <li><a href="#">Royal Caribbean International</a></li>
+          <li><a href="#" class="readmore">See all <span class="shrink">cruise lines </span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+      <ul class="footer-nav-title">
+      	<li class="title"><a data-target=".popular-destinations" data-toggle="collapse" class=""> Popular Destinations</a></li>
+        <ul class="popular-destinations collapse">
+          <li><a href="#">Alaska</a></li>
+          <li><a href="#">Caribbean</a></li>
+          <li><a href="#">Europe</a></li>
+          <li><a href="#">Hawaii</a></li>
+          <li><a href="#">Mexico</a></li>
+          <li><a href="#" class="readmore">See all <span class="shrink">cruise Destinations</span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+      
+    </div>
+    <!-- footer column 1 end --> 
+    
+    <!-- footer column 2 start -->
+    <div class="footer-group">
+      <ul class="footer-nav-title">
+        <li class="title"><a data-target=".specialty-cruises" data-toggle="collapse" class="">Specialty Cruises</a></li>
+        <ul class="specialty-cruises collapse">
+          <li><a href="#">Kids cruises</a></li>
+          <li><a href="#">Party cruises</a></li>
+          <li><a href="#">Culinary cruises</a></li>
+          <li><a href="#">Korea/Japan cruises</a></li>
+          <li><a href="#">MICE</a></li>
+          <li><a href="#" class="readmore">See All <span class="shrink">Specialty Cruises</span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+      <ul class="footer-nav-title">
+        <li class="title"><a data-target=".about-cruising" data-toggle="collapse" class="">All About Cruising</a></li>
+        <ul class="about-cruising collapse">
+          <li><a href="#">Frequently Asked Questions</a></li>
+          <li><a href="#">First Time Cruisers</a></li>
+          <li><a href="#">Value Comparison</a></li>
+          <li><a href="#">Cruising with Kids</a></li>
+          <li><a href="#">Vacation Packing Guide</a></li>
+          <li><a href="#">Onboard Activities</a></li>
+          <li><a href="#">Theme Cruises</a></li>
+          <li><a href="#">Special Event Cruises</a></li>
+          <li><a href="#" class="readmore">See All <span class="shrink">About Cruising</span> &#62;&#62;</a></li>
+        </ul>
+      </ul>
+    </div>
+    <!-- footer column 2 end --> 
+    
+    <!-- footer column 3 start -->
+    <div class="footer-group">
+      <div class="join-community">
+        <div class="title">Join Our Community</div>
+        <div class="social"> <a href="#"><img src="images/icon1.jpg" alt=""></a> <a href="#"><img src="images/icon2.jpg" alt=""></a> <a href="#"><img src="images/icon3.jpg" alt=""></a> <a href="#"><img src="images/icon4.jpg" alt=""></a> </div>
+        <div class="free-news-letter"><div class="title">Free E-Newsletter</div>
+        <p>Want great deals delivered to your inbox? Sign up for our free newsletter and you could win a free cruise for two!</p></div>
+        <form >
+          <input type="text" placeholder="Name:" class="input-block-level">
+          <input type="text" placeholder="Email:" class="input-block-level">
+          <button type="submit" class="btn btn-info btn-small">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <!-- footer column 3 end --> 
+    
+    <!-- footer column 4 start -->
+    <div class="footer-group">
+      <div class="footer-contact-area">
+        <div class="clearfix">
+          <div class="title">Contact Us today</div>
+          <div class="row-fluid">
+            <img src="images/footer-logo.jpg" alt="" class="margin left-active">
+            <div class="control-group"> <strong>360youlun</strong>
+              <div><i class="icon-phone"></i>400 776 776</div>
+              <div><i class="icon-email"></i>Click to Email Us</div>
+            </div>
+          </div>
+        </div>
+        <div class="control-group footer-about-content">
+          <div class="footer-about"> <i class="icon-logo-footer"></i>About <br>
+            360youlun.com </div>
+          Established in 2006, 360youlun is a China leader in the Cruise booking and search... </div>
+      </div>
+    </div>
+    <!-- footer column 4 end --> 
+  </div>
+  <div class=" row-fluid">
+    <div class="footer-coppy">
+      <div class="pull-left">
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li>|</li>
+          <li><a href="#">Privacy</a></li>
+          <li>|</li>
+          <li><a href="#">Legal</a></li>
+          <li>|</li>
+          <li><a href="#">Site Map</a></li>
+        </ul>
+      </div>
+      <div class="pull-right"> &copy; 2013. 360youlun. All rights reserved. </div>
+    </div>
+  </div>
+  <!-- footer end -->  
+  
+</div>
+<!-- /.container --> 
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script> 
+<script >
+	$(function() {
+		$('#foo4').carouFredSel({
+			responsive: true,
+			width: '100%',
+			prev: '#prev',
+			next: '#next',
+			duration    : 50,
+			scroll: 1,
+			items: {
+				
+			 	height: 153,	//	optionally resize item-height
+				visible: {
+					min: 2,
+					max: 3
+				}
+			}
+		});
+		$('#partners-carousel').carouFredSel({
+			
+			responsive: true,
+			width: '100%',
+			prev: '#prev3',
+			next: '#next3',
+			circular: true,
+	    infinite: true,
+	    auto    : false,
+			duration    : 500,
+			scroll: 2,
+			items: {
+			 	height: 72,	//	optionally resize item-height
+				visible: {
+					min: 2,
+					max: 6
+				}
+			}
+		});
+	});
+</script>
+</body>
+</html>
